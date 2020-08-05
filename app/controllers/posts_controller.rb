@@ -20,4 +20,8 @@ class PostsController < ApplicationController
     item = Post.find(params[:id])
     render json: { post: item }
   end
+<<<<<<< Updated upstream
+=======
+  
+>>>>>>> Stashed changes
 end
