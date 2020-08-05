@@ -37,4 +37,5 @@ function memo() {
     e.preventDefault();
   })
 }
+
 window.addEventListener("load", memo);
