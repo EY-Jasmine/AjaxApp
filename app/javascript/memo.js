@@ -5,7 +5,7 @@ function memo() {
     const XHR = new XMLHttpRequest();
     XHR.open("POST", "/posts", true);
     XHR.responseType = "json";
-    XMR.send(formData);
+    XHR.send(formData);
     XHR.onload = () => {
       const item = XHR.response.post;
       const list = document.getElementById("list");
@@ -30,7 +30,11 @@ function memo() {
       }
     };
 
-    XHR.onerror = function ();
+    XHR.onerror = function () {
+      alert("Request failed");
+    };
+
+    e.preventDefault();
   })
 }
 window.addEventListener("load", memo);
